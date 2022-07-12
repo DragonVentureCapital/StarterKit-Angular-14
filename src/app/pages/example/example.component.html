@@ -1,0 +1,116 @@
+<div class="container-fluid pb-5 pb-md-0">
+  <div class="row d-flex">
+    <div class="col-md-4 col-12">
+      <div class="card info-components">
+        <div class="card-header">
+          <h4>Date Picker</h4>
+        </div>
+        <div class="card-body">
+          <div class="date-pickers d-flex flex-column">
+            <div class="mb-3">
+              <app-datepicker currentDate="" [format]="'PPPP'"></app-datepicker>
+            </div>
+            <div class="mb-3">
+              <app-datepicker
+                currentDate=""
+                [format]="'dd/MM/yyyy'"
+              ></app-datepicker>
+            </div>
+            <app-datepicker
+              currentDate=""
+              [format]="'MM/yyyy'"
+            ></app-datepicker>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="card info-components">
+        <div class="card-header">
+          <h4>Dropdown</h4>
+        </div>
+        <div class="card-body">
+          <div class="dropdowns d-flex justify-content-evenly flex-column">
+            <div class="mb-3">
+              <app-generic-dropdown
+                [itemList]="listDropdown"
+                placeholder="Dropdown para seleção"
+                shownValue="name"
+              ></app-generic-dropdown>
+            </div>
+            <div class="mb-3">
+              <app-generic-dropdown
+                [itemList]="listDropdown"
+                placeholder="Select resetavel"
+                [reset]="true"
+                shownValue="name"
+              ></app-generic-dropdown>
+            </div>
+            <app-generic-dropdown
+              [itemList]="listDropdown"
+              placeholder="Seleção de ID resetavel"
+              [reset]="true"
+              shownValue="id"
+            ></app-generic-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="card info-components">
+        <div class="card-header">
+          <h4>Loader</h4>
+        </div>
+        <div class="card-body">
+          <div class="loaders d-flex justify-content-between">
+            <app-loader color="#d50000" size="40px"></app-loader>
+            <app-loader color="#304ffe"></app-loader>
+            <app-loader color="#212121" size="120px"></app-loader>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex">
+    <div class="col-md-2">
+      <button class="btn btn-primary" (click)="openModal()">Abrir Modal</button>
+    </div>
+  </div>
+  <app-modal #modal [modalData]="modalData">
+    <div class="container-fuid">
+      <div class="row">
+        <form class="col-12">
+          <div class="d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column mt-3">
+              <label for="employee">Profissao</label>
+              <app-generic-dropdown
+                [itemList]="listProfissoes"
+                placeholder="Selecione a profissao"
+                [reset]="true"
+                shownValue="nome"
+                (itemChanged)="onProfissaoChanged($event)"
+              ></app-generic-dropdown>
+            </div>
+            <div class="d-flex flex-column mt-3">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                placeholder="Nome"
+                class="form-control mr-3 mb-0 fb-100"
+                name="nome"
+              />
+            </div>
+            <div class="d-flex flex-column mt-3 mb-4">
+              <label for="when">Data de nascimento</label>
+              <app-datepicker
+                format="dd/MM/yyyy"
+                formControlName="dataNascimento"
+              >
+              </app-datepicker>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </app-modal>
+</div>

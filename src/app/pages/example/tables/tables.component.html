@@ -1,0 +1,131 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Table extra Larga ultilando classe table-xl -->
+    <div class="col-md-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>BASIC TABLE</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Profession</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let people of tableData">
+                  <td>{{ people.id }}</td>
+                  <td>{{ people.name }}</td>
+                  <td>{{ people.gender }}</td>
+                  <td>{{ people.age }}</td>
+                  <td>{{ people.profession }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>STRIPED TABLE</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Profession</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let people of tableData">
+                  <td>{{ people.id }}</td>
+                  <td>{{ people.name }}</td>
+                  <td>{{ people.gender }}</td>
+                  <td>{{ people.age }}</td>
+                  <td>{{ people.profession }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Vertical borders</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-border-vertical">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Profession</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let people of tableData">
+                  <td>{{ people.id }}</td>
+                  <td>{{ people.name }}</td>
+                  <td>{{ people.gender }}</td>
+                  <td>{{ people.age }}</td>
+                  <td>{{ people.profession }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Colorful thead</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="bg-primary">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Profession</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let people of tableData">
+                  <td>{{ people.id }}</td>
+                  <td>{{ people.name }}</td>
+                  <td>{{ people.gender }}</td>
+                  <td>{{ people.age }}</td>
+                  <td>{{ people.profession }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Ethel Price",
+    "gender": "female",
+    "age": 22,
+    "profession": "Programmer"
+  },
+  {
+    "id": 2,
+    "name": "Claudine Neal",
+    "gender": "female",
+    "age": 55,
+    "profession": "Astronaut"
+  },
+  {
+    "id": 3,
+    "name": "Beryl Rice",
+    "gender": "female",
+    "age": 21,
+    "profession": "Teacher"
+  },
+  {
+    "id": 4,
+    "name": "Wilder Gonzales",
+    "gender": "male",
+    "age": 23,
+    "profession": "Programmer"
+  },
+  {
+    "id": 5,
+    "name": "Georgina Schultz",
+    "gender": "female",
+    "age": 52,
+    "profession": "Programmer"
+  }
+]
